@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: recibofacil-db
+    environment:
+      POSTGRES_DB: recibofacil
+      POSTGRES_USER: recibofacil
+      POSTGRES_PASSWORD: recibofacil
+    ports:
+      - "5432:5432"
+    volumes:
+      - recibofacil-datos:/var/lib/postgresql/data
+
+volumes:
+  recibofacil-datos:
